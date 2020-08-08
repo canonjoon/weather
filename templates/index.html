@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>날씨 비교 </title>
 </head>
+
 <body>
     Weather all Start
     <form action="\" method="get" name="location">
@@ -14,23 +16,24 @@
     </form>
 
     <div>
-        현재 : 
+        현재 :
         {{time_hour}}<p>
-        
-        {% for i,k in data.items() %}
+
+            {% for i,k in data.items() %}
             {{i}}:
             {{k}}<br>
-            
-        {% endfor %}<br>
 
-        
-        {% for x,y in time.items() %}
+            {% endfor %}<br>
+
+
+            {% for x,y in time.items() %}
             {{x}}:
-            {{y}}<br>
-            
-        {% endfor %}
-        
+            {{y}}&nbsp;&nbsp;
+
+            {% endfor %}
+
     </div>
 
 </body>
+
 </html>
