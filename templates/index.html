@@ -8,22 +8,25 @@
 <body>
     Weather all Start
     <form action="\" method="get" name="location">
-        <label for="">날씨를 조회할 지역을 넣으세요</label>
+        <label for="">날씨를 조회할 지역을 입력하세요</label>
         <input type="text" name="local1" placeholder="시,동을 입력 하세요">
         <button type="submit" id="button">검색</button>
     </form>
 
     <div>
+        현재 : 
+        {{time_hour}}<p>
+        
         {% for i,k in data.items() %}
-            {{i}}<br>
-            {{k}}<br><br>
+            {{i}}:
+            {{k}}<br>
             
-        {% endfor %}
+        {% endfor %}<br>
 
         
         {% for x,y in time.items() %}
-            {{x}}<br>
-            {{y}}<br><br>
+            {{x}}:
+            {{y}}<br>
             
         {% endfor %}
         

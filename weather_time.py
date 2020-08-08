@@ -44,7 +44,7 @@ def n_weather_time(location) :
         data[t]=wea[y]
         y=y+1
 
-
+    
     return data
 
 if __name__ == "__main__":

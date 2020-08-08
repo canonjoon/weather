@@ -57,7 +57,7 @@ def n_weather_data(location):
         
     #print(time)
 
-    local = {'local':n_localname,'deg':n_localde,'weath':n_localwea,}
+    local = {'지역':n_localname,'온도':n_localde,'날씨':n_localwea,}
     
     return local        
 
