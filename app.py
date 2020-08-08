@@ -8,7 +8,8 @@ app = Flask(__name__)
 #url 패턴 - 라우터 설정
 @app.route('/')
 def index():
-   
+    
+
     return render_template("index.html") 
 
 

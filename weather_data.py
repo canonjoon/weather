@@ -9,8 +9,12 @@ def n_weather_data(location):
     #print(soup.text)
     #지역 이름
     local_data=[]
-    n_localname = n_soup.select_one('span[class=btn_select]').text
+    n_localname = n_soup.select_one('div[class=select_box] > span[class=btn_select] > em')
+    if not n_localname:
+        n_localname=n_soup.select_one('div[class=select_box] > a > em')
     #print(n_localname.text)
+    n_localname=n_localname.text
+    
     #지역 현재온도
     n_localde=n_soup.select_one('span[class=todaytemp]').text
     #print(n_localde.text)
@@ -51,4 +55,4 @@ def n_weather_data(location):
 
 
 if __name__ == "__main__":
-    print(n_weather_data('용호동'))
+    print(n_weather_data('부산용호동'))
