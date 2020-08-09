@@ -10,6 +10,7 @@ def n_weather_data(location):
     n_r = requests.get(n_url)
     n_soup = BeautifulSoup(n_r.text, 'lxml')
     # print(soup.text)
+    
     # 지역 이름
     local_data = []
     n_test_html = n_soup.select_one('div[class=sc_head] > h2')

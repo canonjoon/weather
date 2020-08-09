@@ -4,33 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/index.css">
+
     <title>날씨 비교 </title>
 </head>
 
 <body>
-    Weather all Start
+    <h1>Weather all Start</h1>
+
     <form action="\" method="get" name="location">
-        <label for="">날씨를 조회할 지역을 입력하세요</label>
-        <input type="text" name="local1" placeholder="시,동을 입력 하세요">
+        <label for="">날씨를 조회할 시,동을 입력 하세요</label>
+        <input type="text" name="local1" placeholder=" 예) 부산시 용호동 ">
         <button type="submit" id="button">검색</button>
     </form>
+    
+    <br>
 
-    <div>
-        현재 :
-        {{time_hour}}<p>
+    <div class="naver_data">
+        <div id="n_current">
+            현재 :
+            {{time_hour}}<p>
 
             {% for i,k in data.items() %}
             {{i}}:
             {{k}}<br>
 
-            {% endfor %}<br>
+            {% endfor %}
+        </div>
 
-
+        <div id ="n_time">
             {% for x,y in time.items() %}
             {{x}}:
             {{y}}&nbsp;&nbsp;
 
             {% endfor %}
+        </div>
 
     </div>
 

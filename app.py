@@ -17,7 +17,7 @@ def index():
     # now = date.today()
     # now_str=now.strftime("%m%d%H%M")
     now_time = datetime.now()
-    time_hour = now_time.strftime('%m월%d일 - %H시')
+    time_hour = now_time.strftime('%m월%d일 - %H시%M분')
 
     local = request.args.get('local1')
     #local = "강남"
